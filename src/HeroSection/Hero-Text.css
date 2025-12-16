@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
+
+
+.ht-container {
+  font-family: 'Outfit', sans-serif;
+  color: #f0e6ff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+/* ANIMATIONS */
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Badge */
+.ht-badge-wrapper {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+
+
+.ht-badge-wrapper:hover .ht-badge-glow {
+  opacity: 0.75;
+}
+
+.ht-badge {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(111, 25, 186, 0.758);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #f0e6ff;
+}
+
+.ht-badge span {
+  font-size: 14px;
+ background: linear-gradient(to right, #d8b4fe, #fff, #da77f2);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Heading */
+.ht-heading {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.ht-highlight {
+  background: linear-gradient(135deg, #ff8fa3, #c084fc, #a78bfa);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Intro Card */
+.ht-intro-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+
+.ht-intro-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ht-avatar-wrapper {
+  position: relative;
+}
+
+.ht-avatar-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #ff8fa3, #c084fc);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.ht-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ff8fa3;
+  object-fit: cover;
+}
+
+/* Buttons */
+.ht-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary Button */
+.ht-btn-primary-wrapper {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.ht-btn-gradient,
+.ht-btn-gradient-blur {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #ff8fa3, #c084fc, #a78bfa);
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.ht-btn-gradient-blur {
+  filter: blur(12px);
+  opacity: 0.5;
+}
+
+.ht-btn-primary {
+  position: relative;
+  background: transparent;
+  color: #0d0015;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Secondary Button */
+.ht-btn-secondary-wrapper {
+  position: relative;
+}
+
+.ht-btn-secondary-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #ff8fa3, #c084fc);
+  opacity: 0.3;
+  filter: blur(12px);
+  border-radius: 9999px;
+}
+
+.ht-btn-secondary {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 143, 163, 0.3);
+  backdrop-filter: blur(20px);
+  color: #f0e6ff;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Moving waving emoji */
+.hello-emoji {
+  font-size: 22px;
+  display: inline-block;
+  animation: wave 1.8s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* BUTTONS stay in one line on small screens */
+.ht-buttons {
+  flex-wrap: nowrap;
+}
+
+/* Make text smaller on small screens */
+@media (max-width: 600px) {
+  .ht-heading {
+    font-size: clamp(2.2rem, 8vw, 2.6rem);
+  }
+
+  .ht-intro-card {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .hello-emoji {
+    font-size: 18px;
+  }
+
+  .ht-btn-primary,
+  .ht-btn-secondary {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .ht-buttons {
+    gap: 10px;
+    flex-wrap: nowrap; /* keep in one line */
+  }
+}

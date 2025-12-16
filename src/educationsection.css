@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap');
+
+
+body {
+ 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  
+}
+
+.education-section {
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.heading-wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.script-text {
+    font-family: 'Allura', cursive;
+    font-size: 3rem;
+    color: hsl(0, 0%, 95%);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.main-heading {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.gradient-gold-teal {
+       background: linear-gradient(135deg, hsl(260, 70%, 40%), hsl(180, 80%, 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.education-card {
+    position: relative;
+    padding: 1.5rem;
+    border-left: 4px solid hsla(240, 80%, 50%, 0.564); /* dark blue */
+}
+
+.gradient-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        hsl(240, 80%, 50%),  /* blue */
+        hsl(180, 80%, 60%),  /* cyan */
+        hsl(270, 70%, 50%)   /* purple */
+    );
+}
+
+
+.degree {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.institution {
+    font-size: 1.125rem;
+    color:   hsl(180, 80%, 60%);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.year {
+    font-size: 0.875rem;
+    color: hsl(220, 10%, 65%);
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    color: hsla(0, 0%, 98%, 0.8);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .script-text {
+        font-size: 2rem;
+    }
+    
+    .main-heading {
+        font-size: 3.5rem;
+    }
+}

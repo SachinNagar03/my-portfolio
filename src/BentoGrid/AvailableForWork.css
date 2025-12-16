@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.AFW-card {
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 10px;
+  height: 390px;
+  position: relative;
+  width: 100%;
+  /* max-width: 500px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* STATUS SECTION */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(142, 76%, 45%);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsla(142, 76%, 45%, 0.7); }
+  50% { box-shadow: 0 0 0 8px hsla(142, 76%, 45%, 0); }
+}
+
+.status-text {
+  color: hsl(142, 76%, 45%);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* MAIN HEADING */
+.AFW-headline {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.AFW-text-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(330, 80%, 55%),
+    hsl(280, 70%, 60%),
+    hsl(180, 80%, 50%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* DESCRIPTION */
+.AFW-description,
+.description-sm {
+  color: hsl(215, 15%, 55%);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* DETAILS */
+.AFW-details-list {
+  list-style: none;
+  margin-bottom: 8px;
+  padding: 0;
+  width: 100%;
+}
+
+.AFW-details-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: hsl(215, 15%, 55%);
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.AFW-details-list svg {
+  width: 18px;
+  height: 18px;
+  color: hsl(280, 70%, 60%);
+  flex-shrink: 0;
+}
+
+/* CTA BUTTON */
+.AFW-cta-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: hsl(210, 20%, 90%);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background: transparent;
+  border:  solid transparent;
+
+  background-image: 
+    linear-gradient(hsl(220, 25%, 10%), hsl(220, 25%, 10%)),
+    linear-gradient(
+    135deg,
+    hsl(330, 80%, 55%),
+    hsl(280, 70%, 60%),
+    hsl(180, 80%, 50%)
+  );;
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.AFW-cta-button:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------------ */
+/*        RESPONSIVE PART         */
+/* ------------------------------ */
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .AFW-card { padding: 24px; }
+
+  .AFW-headline { font-size: 26px; }
+
+  .AFW-description,
+  .description-sm,
+  .AFW-details-list li {
+    font-size: 12.5px;
+  }
+
+  .AFW-cta-button {
+    padding: 12px;
+    font-size: 13.5px;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .AFW-card { padding: 20px; }
+
+  .status-text { font-size: 11px; }
+
+  .AFW-headline { font-size: 22px; }
+
+  .AFW-description,
+  .description-sm,
+  .AFW-details-list li {
+    font-size: 12px;
+  }
+
+  .AFW-details-list svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .AFW-cta-button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

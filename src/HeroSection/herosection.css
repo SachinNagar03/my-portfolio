@@ -1,0 +1,136 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  /* background: radial-gradient( 850px 1150px at bottom, #1d0639c9 0%, #000 100%); */
+  overflow: hidden;
+  background-color: black;
+  /* border: 2px solid white; */
+background: radial-gradient(circle 400px at 55% 45%, rgba(151, 60, 255, 0.244) 0%, transparent 70%),
+            radial-gradient(circle 450px at 40% 50%, rgba(151, 60, 255, 0.244) 0%, transparent 70%);
+
+}
+
+.star-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* individual star */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px white);
+  animation: twinkle 4s infinite ease-in-out alternate;
+  animation-fill-mode: forwards;
+}
+
+/* smooth twinkle (starts calm, no flash) */
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+
+.herotext-container{
+  /* border: 2px solid white; */
+  height: 650px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 30px;
+}
+.Hero-text{
+/* border: 2px solid white; */
+height: 520px;
+width:90%;
+z-index: 10;
+}
+
+@media (max-width : 700px) {
+  .Hero-text{
+    height: 450px;
+    width: 100%;
+  }
+  .hero-section{
+    background: radial-gradient(circle 400px at 55% 55%, rgba(151, 60, 255, 0.244) 0%, transparent 70%),
+            radial-gradient(circle 350px at 40% 68%, rgba(151, 60, 255, 0.244) 0%, transparent 70%);
+
+  }
+}
+/* --------- Custom Variables --------- */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --accent: 217.2 91.2% 59.8%;
+  --radius: 0.75rem;
+
+--zinc-700: 240 5.2% 80%; /* brighter version */
+
+  --zinc-500: 240 3.8% 46.1%;
+  --zinc-900: 240 5.9% 10%;
+}
+
+/* --------- Gradient Text --------- */
+.text-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--zinc-500)),
+    hsl(var(--zinc-700)),
+    hsl(var(--zinc-900))
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Glassmorphism ----------- */
+.glass {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+}
+
+
+
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  60% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 3s linear infinite;
+}
+
+

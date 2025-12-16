@@ -1,0 +1,96 @@
+/* MAIN SECTION */
+.projects-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 8px;          /* mobile */
+  
+  
+  overflow: hidden;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .projects-section {
+    padding-top: 48px;       /* sm:pt-12 */
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Laptop/Desktop */
+@media (min-width: 1024px) {
+  .projects-section {
+    padding-top: 80px;       /* lg:pt-20 */
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* BG GLOW
+.bg-glow {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-glow);
+  opacity: 0.3;
+  animation: float 6s infinite ease-in-out;
+} */
+
+/* Floating Glow Circles */
+/* .bg-circle {
+  position: absolute;
+  
+  border-radius: 9999px;
+  filter: blur(60px);
+  animation: pulse 5s infinite alternate;
+}
+
+.bg-circle-1 {
+  top: 25%;
+  right: 25%;
+  background: blue;
+}
+
+.bg-circle-2 {
+  bottom: 25%;
+  left: 25%;
+  background: rgba(var(--secondary), 0.05);
+} */
+
+/* Container */
+.projects-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.projects-header {
+  text-align: center;
+}
+
+.projects-subtext {
+  color: var(--muted-foreground);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* GAP BETWEEN CARDS */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+}
+
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.5; }
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+
+
+.heading-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.background-text {
+  font-size: 8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(240, 5%, 26%);
+  opacity: 0.3;
+  user-select: none;
+  line-height: 1;
+}
+
+.overlay-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    hsl(330, 80%, 55%),
+    hsl(280, 70%, 60%),
+    hsl(180, 80%, 50%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Dancing Script", cursive;
+}
+
+.accent-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.accent-dot {
+  position: absolute;
+  left: 25%;
+  top: 33%;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: hsl(180, 80%, 50%);
+  opacity: 0.6;
+}
+
+.accent-square {
+  position: absolute;
+  right: 33%;
+  bottom: 33%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid hsl(330, 80%, 55%);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    font-size: 5rem;
+  }
+  .overlay-text {
+    font-size: 3rem;
+  }
+}
