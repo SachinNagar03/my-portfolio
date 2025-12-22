@@ -16,8 +16,8 @@ const Projects = () => {
         "Personal portfolio platform with dynamic project showcases, clean UI architecture, responsive design, and optimized performance.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Motion" ],
       image: portofolio,
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://sachinnagar-portfolio.vercel.app/",
+      githubUrl: "https://github.com/SachinNagar03/my-portfolio",
     },
     {
       title: "Gym Management System",
@@ -25,8 +25,8 @@ const Projects = () => {
         "A live gym management system currently running in two gyms, featuring real-time member management, dynamic dashboards, responsive UI, and smooth data handling for daily operations.",
       tags: ["React", "Tailwind CSS ", "Firebase", "Java"],
       image: GYM,
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://gym-app-showcase.vercel.app/",
+      githubUrl: "https://github.com/SachinNagar03/gym-app-showcase",
     },
     
   ];

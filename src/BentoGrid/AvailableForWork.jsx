@@ -105,7 +105,7 @@ const AvailableForWork = () => {
         </li>
       </ul>
 
-      <button className="AFW-cta-button">Resume</button>
+      <button className="AFW-cta-button" onClick={()=>window.open("/sachinResume.pdf" , "_blank")}>Resume</button>
     </div>
   );
 };
