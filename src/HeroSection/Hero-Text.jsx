@@ -24,7 +24,7 @@ const HolographicHero = ({scrollToContact}) => {
 
       {/* HEADING */}
       <h1 className="ht-heading">
-        Crafting <span className="ht-highlight">digital experiences</span>
+        Building <span className="ht-highlight">digital experiences</span>
         <br />
         with clarity & creativity.
       </h1>
