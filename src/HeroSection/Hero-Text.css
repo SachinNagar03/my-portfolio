@@ -44,7 +44,7 @@
 
 .ht-badge {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(111, 25, 186, 0.758);
   border-radius: 9999px;
   padding: 8px 16px;
@@ -92,7 +92,7 @@
 
 .ht-intro-card {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(8px);
   border-radius: 9999px;
   padding: 12px 24px;
   display: flex;
