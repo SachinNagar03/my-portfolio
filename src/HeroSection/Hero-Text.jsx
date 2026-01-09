@@ -3,7 +3,7 @@ import "./Hero-Text.css";
 
 const HolographicHero = ({scrollToContact}) => {
   const copyEmail = () => {
-    navigator.clipboard.writeText("hello@sachinnagar.in");
+    navigator.clipboard.writeText("sachinnagar8662@gmail.com");
     alert("Email copied!");
   };
 
