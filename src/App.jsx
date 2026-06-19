@@ -9,6 +9,7 @@ import Skillsection from "./skillsection";
 import Herosection from "./HeroSection/herosection";
 import BentoGrid from "./BentoGrid/bentogrid";
 import SmoothScroll from "./SmoothScroll";
+import ExperienceSection from "./ExperienceSection";
 
 function App() {
   // Create references
@@ -45,13 +46,14 @@ function App() {
       <div ref={projectsRef}>
         <Projects />
       </div>
+       <div ref={educationRef}>
+        <ExperienceSection />
+      </div>
       <div ref={educationRef}>
         <EducationSection/>
       </div>
 
-      <div ref={educationRef}>
-        <EducationSection />
-      </div>
+     
 
       <div ref={contactRef}>
         <Footer />

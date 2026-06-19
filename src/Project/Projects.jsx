@@ -1,11 +1,13 @@
 // Projects.jsx
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import './projects.css'
+import "./projects.css";
 import project1 from "../assets/project1.jpg";
 import project2 from "../assets/project2.jpg";
 import portofolio from "../assets/portfolio.png";
 import GYM from "../assets/gymMgmt.png";
+import replyAi from "../assets/replyAi.png";
+
 import Heading from "../Heading";
 
 const Projects = () => {
@@ -14,7 +16,7 @@ const Projects = () => {
       title: "My Portfolio",
       description:
         "Personal portfolio platform with dynamic project showcases, clean UI architecture, responsive design, and optimized performance.",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Motion" ],
+      tags: ["React", "TypeScript", "Tailwind CSS", "Motion"],
       image: portofolio,
       demoUrl: "https://sachinnagar-portfolio.vercel.app/",
       githubUrl: "https://github.com/SachinNagar03/my-portfolio",
@@ -28,27 +30,31 @@ const Projects = () => {
       demoUrl: "https://gym-app-showcase.vercel.app/",
       githubUrl: "https://github.com/SachinNagar03/gym-app-showcase",
     },
-    
+    {
+      title: "ReplyAI - AI Email & Message Generator",
+     description:
+  "An AI-powered tool that generates professional emails and messages using Gemini API, allowing users to create tone-based content from simple prompts.",
+      tags: ["React", "Node.js", "Express.js", "MongoDB", "Gemini API"],
+      image: replyAi,
+      demoUrl: "https://reply-genai.vercel.app/",
+      githubUrl: "https://github.com/SachinNagar03/ReplyAI",
+    },
   ];
 
   return (
-        <section className="projects-section">
-
-
-        <div className="projects-container">
-          <div className="projects-header">
-            <Heading bgText="PROJECTS" overlayText="Creative" />
-
-          </div>
-
-          <div className="projects-list">
-            {projects.map((p, i) => (
-              <ProjectCard key={i} {...p} index={i} />
-            ))}
-          </div>
+    <section className="projects-section">
+      <div className="projects-container">
+        <div className="projects-header">
+          <Heading bgText="PROJECTS" overlayText="Creative" />
         </div>
-      </section>
 
+        <div className="projects-list">
+          {projects.map((p, i) => (
+            <ProjectCard key={i} {...p} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

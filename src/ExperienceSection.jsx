@@ -52,15 +52,13 @@ export default function ExperienceSection() {
 
   return (
     <section id="experience" className="exp-section">
-      <div aria-hidden className="exp-blob exp-blob--tl" />
-      <div aria-hidden className="exp-blob exp-blob--br" />
       <div aria-hidden className="exp-dots" />
 
       <div className="exp-container">
         <div className="exp-header">
           <div className="exp-eyebrow">
             <span className="exp-eyebrow-line" />
-            <span>03 — Journey</span>
+            <span>Professional Journey</span>
           </div>
           <h2 className="exp-title">
             <span className="exp-title-dim">Where I've</span>
@@ -80,22 +78,22 @@ export default function ExperienceSection() {
 
         <div className="exp-grid">
           <ol className="exp-rail">
-            <span aria-hidden className="exp-rail-line" />
+            {/* <span aria-hidden className="exp-rail-line" /> */}
+
             {experiences.map((exp, i) => (
               <li key={exp.company} className="exp-rail-item">
-                <button
-                  onClick={() => setActive(i)}
-                  className="exp-rail-btn"
-                >
-                  <span
-                    aria-hidden
-                    className={`exp-rail-dot${active === i ? " is-active" : ""}`}
-                  />
+                <span
+                  aria-hidden
+                  className={`exp-rail-dot${active === i ? " is-active" : ""}`}
+                />
+
+                <button onClick={() => setActive(i)} className="exp-rail-btn">
                   <span
                     className={`exp-rail-year${active === i ? " is-active" : ""}`}
                   >
                     {exp.period.split("—")[0].trim()}
                   </span>
+
                   <span
                     className={`exp-rail-company${active === i ? " is-active" : ""}`}
                   >
