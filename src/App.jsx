@@ -16,6 +16,7 @@ function App() {
   const educationRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const experience = useRef(null);
 
   // Scroll functions (these will be passed to Navbar)
   const scrollToSkills = () => skillsRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -43,6 +44,9 @@ function App() {
 
       <div ref={projectsRef}>
         <Projects />
+      </div>
+      <div ref={educationRef}>
+        <EducationSection/>
       </div>
 
       <div ref={educationRef}>
